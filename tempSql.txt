@@ -1,0 +1,369 @@
+//schema_s table
+CREATE TABLE `schema_s` (
+  schemaId varchar(11),
+  PRIMARY KEY (schemaId)
+);
+
+
+//BatchID table
+create table batchid(
+bid varchar(10),
+    schemaId varchar(11),
+    primary key(bid),
+    FOREIGN KEY(schemaId) REFERENCES schema_s(schemaId)
+);
+
+//yearEntery
+create table yearentery(
+    yearId varchar(10),
+    primary KEY(yearId)
+);
+
+//stu
+create table stu(
+	usn varchar(15),
+    schemaId varchar(11),
+    bid varchar(11),
+    PRIMARY key(usn),
+    FOREIGN KEY (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid)
+);
+
+//subject Entery
+create table subjectEntry(
+	subId varchar(15),
+    subCode varchar(15),
+    subName varchar(30),
+    schemaId varchar(10),
+    primary key(subCode),
+    FOREIGN KEY (schemaId) REFERENCES schema_s(schemaId)
+);
+
+//treshold
+//use less table
+create table treshold(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1tresh integer,
+    co2tresh integer,
+    co3tresh integer,
+    co4tresh integer,
+    co5tresh integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//cap values
+
+create table cap(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1cap integer,
+    co2cap integer,
+    co3cap integer,
+    co4cap integer,
+    co5cap integer,
+    treshforexternal integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//marks
+
+create table marks(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    usn varchar(15),
+    co1marks integer,
+    co2marks integer,
+    co3marks integer,
+    co4marks integer,
+    co5marks integer,
+    external integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode),
+    FOREIGN key (usn) REFERENCES stu(usn)
+);
+
+//po1
+create table po1(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po1 integer,
+    co2po1 integer,
+    co3po1 integer,
+    co4po1 integer,
+    co5po1 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po2
+create table po2(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po2 integer,
+    co2po2 integer,
+    co3po2 integer,
+    co4po2 integer,
+    co5po2 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po3
+
+create table po3(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po3 integer,
+    co2po3 integer,
+    co3po3 integer,
+    co4po3 integer,
+    co5po3 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po4
+
+create table po4(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po4 integer,
+    co2po4 integer,
+    co3po4 integer,
+    co4po4 integer,
+    co5po4 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po5
+
+create table po5(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po5 integer,
+    co2po5 integer,
+    co3po5 integer,
+    co4po5 integer,
+    co5po5 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po6
+
+create table po6(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po6 integer,
+    co2po6 integer,
+    co3po6 integer,
+    co4po6 integer,
+    co5po6 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po7
+
+create table po7(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po7 integer,
+    co2po7 integer,
+    co3po7 integer,
+    co4po7 integer,
+    co5po7 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po8
+
+create table po8(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po8 integer,
+    co2po8 integer,
+    co3po8 integer,
+    co4po8 integer,
+    co5po8 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po9
+
+create table po9(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po9 integer,
+    co2po9 integer,
+    co3po9 integer,
+    co4po9 integer,
+    co5po9 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po10
+
+
+create table po10(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po10 integer,
+    co2po10 integer,
+    co3po10 integer,
+    co4po10 integer,
+    co5po10 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po11
+
+
+create table po11(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po11 integer,
+    co2po11 integer,
+    co3po11 integer,
+    co4po11 integer,
+    co5po11 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//po12 
+
+
+create table po12(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1po12 integer,
+    co2po12 integer,
+    co3po12 integer,
+    co4po12 integer,
+    co5po12 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//pso1
+
+create table pso1(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1pso1 integer,
+    co2pso1 integer,
+    co3pso1 integer,
+    co4pso1 integer,
+    co5pso1 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//pso2
+
+create table pso2(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1pso2 integer,
+    co2pso2 integer,
+    co3pso2 integer,
+    co4pso2 integer,
+    co5pso2 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);
+
+//pso3
+
+create table pso3(
+schemaId varchar(15),
+    bid varchar(15),
+    yearId varchar(15),
+    subCode varchar(15),
+    co1pso3 integer,
+    co2pso3 integer,
+    co3pso3 integer,
+    co4pso3 integer,
+    co5pso3 integer,
+    FOREIGN key (schemaId) REFERENCES schema_s(schemaId),
+    FOREIGN KEY (bid) REFERENCES batchid(bid),
+    FOREIGN key (yearId) REFERENCES yearentery(yearId),
+    FOREIGN key (subCode) REFERENCES subjectentry(subCode)
+);

@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    list-style: none;
+}
+
+  nav .logo{
+    color: var(--purple);
+    font-size: 24px;
+    line-height: 70px;
+    padding-left: 110px;
+  }
+  nav .logo span{
+    color: var(--pink);
+  }
+  nav{
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    color:var(--purple);
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 20px;
+    background: #fff;
+    transition: .5s;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+    color: var(--pink);
+  }
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 1.5px solid#E90064;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #A31ACB;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+  }
+  nav ul ul li a i{
+    margin-left: 45px;
+  }
+
+
+
+body
+{ 
+background:url(../images/img4.jpg);
+ background-repeat:no-repeat;
+ background-size:cover;
+ height:500px;
+}
+.button{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:80px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.button1{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:140px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.button2{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:200px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.button3{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:260px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.button4{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:320px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+.button5{
+   width: 60%;
+   display: inline-flex;
+   height: 50px;
+   padding: 0;
+   background: #009578;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   overflow: hidden;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 16px;
+   font-weight:500;
+   cursor: pointer;
+   justify-content: center;
+   margin: 0;
+   position: absolute;
+   margin-top:380px;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
+
+   .button:hover {
+       background: #008168;
+   }
+   .button1:hover {
+       background: #008168;
+      }
+  .button2:hover {
+       background: #008168;
+  }
+  .button3:hover {
+       background: #008168;
+   }
+    .button4:hover {
+       background: #008168;
+   }
+   .button5:hover {
+       background: #008168;
+   }
+  
+   
+   .button__text,
+   .button__icon {
+       display: inline-flex;
+       align-items: center;
+       padding: 0 24px;
+       color: #fff;
+       height: 100%;
+       font-size: 20px;
+       font-weight:bold;
+
+   }
+
+   .button__icon{
+       font-size: 1.5em;
+       background: rgba(0,0,0,0.08);
+   }
+
+
+   .classyy{
+       background-color: #6d97854b;
+       padding:5px 20px 15px 20px;
+       border: 2px solid lightgrey;
+       border-radius: 2px;
+       box-sizing: border-box; 
+       height: 300px;
+       margin: 80px 100px 0px 100px;
+   //width:450px;
+//background-color:rgba(0,0,0,0.5);
+box-shadow:0px 0px 10px 7px #000;
+   }
+
+   .button6{
+       width:300px;
+       height: 100px;
+       border:none;
+       color:white;
+       border-radius:4px;
+       transition: ease-out 0.3s;
+       font-size: 2rem;
+       outline:none;
+       border:3px solid #42FBF2;
+       position: relative;
+       z-index: 1;
+   }
+
+   .button6:hover{
+       color:#fff;
+       cursor: pointer;
+   }
+
+   .button6:before{
+       transition: 0.5s all ease;
+       position : absolute;
+       top: 0;
+       left: 50%;
+       right:50%;
+       bottom: 0;
+       opacity: 0;
+       content:"";
+       background-color: #42FBF2;
+   }
+
+   .button6:hover:before{
+       transition: 0.5s all ease;
+       left:0;
+       right: 0;
+       opacity:1;
+       z-index: -1;
+   }
